@@ -359,5 +359,11 @@ def main():
         print(f"\n❌ An error occurred: {str(e)}")
         print("Please check your internet connection and API keys.")
 
-if __name__ == "__main__":
-    main()
+# Set default inputs (used for provisioning test only)
+default_inputs = {
+    "from_station": "NDLS",
+    "to_station": "BCT",
+    "date": "25-12-2025"
+}
+
+crew = create_train_search_crew(default_inputs)
